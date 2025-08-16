@@ -1,6 +1,7 @@
 package supabase
 
 type Config struct {
+	ApiURL          string
 	ApiKey          string
 	Bucket          string
 	ProjectRef      string

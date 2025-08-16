@@ -39,6 +39,9 @@ func New(cfg Config) (*Client, error) {
 	newLogger(cfg.Debug)
 
 	apiHost := fmt.Sprintf(apiHostFormat, cfg.ProjectRef)
+	if len(strings.TrimSpace(cfg.ApiURL)) > 0 {
+		apiHost = cfg.ApiURL
+	}
 
 	supaDB := NewPostgres(
 		cfg.ProjectRef,
