@@ -37,8 +37,8 @@ func AuthToken(token string) HeaderOption {
 	}
 }
 
-func NewPostgres(projectRef string, opts ...PostgresOption) *PostgresClient {
-	apiHost := fmt.Sprintf(apiHostFormat, projectRef)
+func NewPostgres(apiHost string, opts ...PostgresOption) *PostgresClient {
+
 	base, err := url.Parse(apiHost + restAPIPath)
 	if err != nil {
 		panic(fmt.Sprintf("invalid url provided in postgres new"))

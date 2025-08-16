@@ -44,7 +44,7 @@ func New(cfg Config) (*Client, error) {
 	}
 
 	supaDB := NewPostgres(
-		cfg.ProjectRef,
+		apiHost,
 		WithToken(cfg.ApiKey),
 		With(authorizationHeader, cfg.ApiKey),
 	)
