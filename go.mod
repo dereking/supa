@@ -1,4 +1,4 @@
-module github.com/lengzuo/supa
+module github.com/dereking/supa
 
 go 1.20
 
